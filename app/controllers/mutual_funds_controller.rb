@@ -1,4 +1,6 @@
 class MutualFundsController < ApplicationController
+  include FriendlyID
+
   def index
   end
 
