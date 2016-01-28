@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: "/"
+  root to: "welcome#index"
 
   # Routes for our Mutual Funds
   get "/mutualfunds", to: "mutualfunds#index"
