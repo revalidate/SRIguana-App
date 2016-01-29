@@ -6,7 +6,7 @@ class MutualFundsController < ApplicationController
 
   def show
     # @mutualfund = MutualFund.friendly.find(params[:id])
-    @mutualfund = MutualFund.find_by_id(params[:id])
+    @mutualfund = MutualFund.friendly.find(params[:id])
     @stocks = @mutualfund.stocks
 
     render :show
