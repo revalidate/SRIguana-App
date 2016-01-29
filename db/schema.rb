@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160128232222) do
+ActiveRecord::Schema.define(version: 20160129001035) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,16 @@ ActiveRecord::Schema.define(version: 20160128232222) do
   add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
 
+  create_table "mutual_fund_stocks", force: :cascade do |t|
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.integer  "stock_id"
+    t.integer  "mutual_fund_id"
+  end
+
+  add_index "mutual_fund_stocks", ["mutual_fund_id"], name: "index_mutual_fund_stocks_on_mutual_fund_id", using: :btree
+  add_index "mutual_fund_stocks", ["stock_id"], name: "index_mutual_fund_stocks_on_stock_id", using: :btree
+
   create_table "mutual_funds", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
@@ -44,4 +54,6 @@ ActiveRecord::Schema.define(version: 20160128232222) do
     t.datetime "updated_at",  null: false
   end
 
+  add_foreign_key "mutual_fund_stocks", "mutual_funds"
+  add_foreign_key "mutual_fund_stocks", "stocks"
 end
