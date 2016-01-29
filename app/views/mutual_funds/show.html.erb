@@ -1,22 +1,22 @@
-<br>
-<div class="container">
-
-	<h1><%= @mutualfund.name %></h1>
-	<hr>
-
-
-		<div>
-			<p>
-				Stocks In <b><%= @mutualfund.name %></b> <br>
-				<br>
-				<% @stocks.each do |stock| %>
-					<strong>Name</strong>: <%=stock.name %> <br>
-					<strong>Ticker</strong>: <%=stock.ticker %><br>
-					<strong>Industry</strong>: <%=stock.industry %> <br>
-					<strong>Description</strong>: <%=stock.description %> <br>
-					<br>
-				<% end %>
-			</p>
-		</div>
+<div>
+	<img class="stock" src="/assets/stock.jpg">
+	  <h1 class="ticker"><span>Mutual Fund Portfolio</span></h1>
 
 </div>
+<div class="container">	
+	<div>
+		<h3>Stocks In <b><%= @mutualfund.name %></h3>
+			<br>
+			<% @stocks.each do |stock| %>
+			<div class="stocks">
+				<ul>
+					<li>Name: <%=stock.name %></li>
+					<li>Ticker: <%=stock.ticker %></li>
+					<li>Industry: <%=stock.industry %></li>
+					<li>Description: <%=stock.description %></li>
+				</ul>
+			</div>	
+			<% end %>
+	</div>
+</div>	
+
