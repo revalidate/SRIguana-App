@@ -1,6 +1,11 @@
-<h1>MutualFunds#index</h1>
-<p>Find me in app/views/mutual_funds/index.html.erb</p>
+<br>
+<div class="container">
 
-<% @mutualfunds.each do |mutualfund| %>
-	Name: <%= mutualfund.name %><br>
-<% end %>
+	<h1>Mutual Funds</h1>
+	<hr>
+
+	<% @mutualfunds.each do |mutualfund| %>
+		<strong>Name</strong>: <%= mutualfund.name %><br>
+	<% end %>
+
+</div>

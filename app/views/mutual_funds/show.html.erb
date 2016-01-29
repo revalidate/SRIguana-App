@@ -1,17 +1,22 @@
-<h1>MutualFunds#show</h1>
-<p>Find me in app/views/mutual_funds/show.html.erb</p>
+<br>
+<div class="container">
+
+	<h1><%= @mutualfund.name %></h1>
+	<hr>
 
 
-	<div>
-		<p>
-			Stocks In <b><%= @mutualfund.name %></b> <br>
-			<br>
-			<% @stocks.each do |stock| %>
-				Name: <%=stock.name %> <br>
-				Ticker:<%=stock.ticker %><br>
-				Industry: <%=stock.industry %> <br>
-				Description: <%=stock.description %> <br>
+		<div>
+			<p>
+				Stocks In <b><%= @mutualfund.name %></b> <br>
 				<br>
-			<% end %>
-		</p>
-	</div>
+				<% @stocks.each do |stock| %>
+					<strong>Name</strong>: <%=stock.name %> <br>
+					<strong>Ticker</strong>: <%=stock.ticker %><br>
+					<strong>Industry</strong>: <%=stock.industry %> <br>
+					<strong>Description</strong>: <%=stock.description %> <br>
+					<br>
+				<% end %>
+			</p>
+		</div>
+
+</div>
