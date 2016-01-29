@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160129001035) do
+ActiveRecord::Schema.define(version: 20160129221636) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,7 +43,10 @@ ActiveRecord::Schema.define(version: 20160129001035) do
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "slug"
   end
+
+  add_index "mutual_funds", ["slug"], name: "index_mutual_funds_on_slug", using: :btree
 
   create_table "stocks", force: :cascade do |t|
     t.string   "name"
