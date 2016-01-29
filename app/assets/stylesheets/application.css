@@ -8,13 +8,57 @@
  *= require_tree .
  *= require_self
  */
+
  .jumbotron {
- 	background-image: url(/assets/homepage.jpg);
- 	background-repeat: no-repeat;
- 	height: 350px;
- 	background-size: cover;
- 	color:white;
- 	text-align: center;
- 	background-position: center center;
- 	font-family: Papyrus;
+ 	  background-image: url(/assets/homepage.jpg);
+ 	  background-repeat: no-repeat;
+ 	  height: 350px;
+ 	  background-size: cover;
+ 	  color:white;
+ 	  text-align: center;
+ 	  background-position: center center;
+ 	  font-family: times;
  }
+
+ .header {
+    padding-top: 30px;
+ }
+ html {
+  height: 100%;
+  width: 100%;
+ }
+ body {
+  font-size: 20px;
+  height: 100%;
+  width: 100%;
+  
+ }
+
+ p {
+  padding: 20px;
+ }
+
+ li {
+    list-style-type: none;
+ }
+
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -60px;
+  padding: 0 0 60px;
+}
+
+#wrap > .container{
+  padding: -60px -15px 0;
+}
+.footer {
+  background-color: black;
+  color: white;
+  height: 60px;
+}
+
+.copyright {
+  position: absolute;
+}
