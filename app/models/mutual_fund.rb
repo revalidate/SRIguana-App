@@ -1,5 +1,5 @@
 class MutualFund < ActiveRecord::Base
-	# include FriendlyID
+	# include FriendlyId
 	# friendly_id :name
 
 	has_many :mutual_fund_stocks
