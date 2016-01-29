@@ -1,9 +1,13 @@
+<div>  
+  <img class="mutual" src="/assets/ticker.jpg">
+  <h1 class="ticker"><span>Mutual Funds</span></h1>
+</div>
 <div class="container">
-<h1 class="header">Mutual Funds</h1>
-
-<% @mutualfunds.each do |mutualfund| %>
-	<ul>
+  <div class="funds">  
+  <% @mutualfunds.each do |mutualfund| %>
+	 <ul>
     <li><strong>Name: </strong><%= mutualfund.name %></li>
   </ul>  
 <% end %>
+</div>
 </div>
