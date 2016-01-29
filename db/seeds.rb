@@ -1,5 +1,5 @@
 MutualFund.destroy_all
-Stock.destory_all
+Stock.destroy_all
 
 kayvon = MutualFund.create({
 	name: "Kayvon's Underpaid and Starving Children Mutual Fund"
