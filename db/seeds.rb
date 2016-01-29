@@ -69,5 +69,9 @@ nintendo = Stock.create({
 	description: "Where dreams are created for men children"
 })
 
+kayvon.stocks << [amazon, wayfair, facebook]
+thomas.stocks << [google, nintendo]
+joe.stocks << [mckesson, facebook, visa]
+
 
 
