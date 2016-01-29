@@ -7,7 +7,7 @@
   <div class="funds">  
   	<% @mutualfunds.each do |mutualfund| %>
 	 		<ul>
-    		<li><strong>Name: </strong><%= mutualfund.name %></li>
+    		<li><strong>Name: </strong><%= link_to mutualfund.name, mutual_fund_path(mutualfund) %></li>
   		</ul>  
 		<% end %>
 	</div>
