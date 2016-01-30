@@ -17,7 +17,13 @@
 				</ul>
 			</div>	
 			<% end %>
-			<%= @stocks.group(:industry).count %>
+
+			H: <%= @h.each {|key, value| puts "#{key} is #{value}" } %>
+
+			These iz industry counts: <%=  @industry_counts %> <br>
+			Test <%= @industry_counts.each do |key, value| %>
+			<%= p "Hello" %>
+			<% end %>
 	</div>
 </div>	
 
