@@ -5,7 +5,6 @@ class MutualFundsController < ApplicationController
   end
 
   def show
-    # @mutualfund = MutualFund.friendly.find(params[:id])
     @mutualfund = MutualFund.friendly.find(params[:id])
     @stocks = @mutualfund.stocks
 
