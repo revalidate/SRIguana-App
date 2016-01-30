@@ -17,6 +17,16 @@
 				</ul>
 			</div>	
 			<% end %>
+
+
+			These iz industry counts: <%=  @industry_counts %> <br>
+			Test: <% @industry_counts.each do |key, value| %>
+			<% @value = (value/@stocks.length.to_f)*100 %>
+			<% @key = key %>
+			<%= @key %>
+			<%= @value.round(2) %>
+			<%= "%" %>
+			<% end %>
 	</div>
 </div>	
 
