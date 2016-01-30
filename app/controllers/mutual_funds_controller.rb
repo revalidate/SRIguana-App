@@ -12,26 +12,6 @@ class MutualFundsController < ApplicationController
     # @industry_counts = {}
     @industry_counts = @stocks.group(:industry).count
 
-    @h = { "a" => 100, "b" => 200 }
-    
-    # @temp = @industry_counts["Tobacco"]
-    # @temp2 = @industry_counts["Technology"]
-    # @temp = @industry_counts[:industry]
-
-    # @industry_counts.each_pair do |key,value|
-    	
-    # 	# temp2 = temp / @stocks.length
-    # 	# temp3 = temp2 * 100
-    # 	# temp3
-    # end
-
-    # @array = []
-
-    # @stocks.each do |x|
-    # 	temp = x.industry
-    # 	@array << temp
-    # end 
-
     render :show
 
   end
