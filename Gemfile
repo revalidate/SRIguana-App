@@ -34,9 +34,6 @@ gem 'ffaker'
 #Pretty URLs
 gem 'friendly_id', '~> 5.1.0'
 
-#Chart generator
-gem "chartkick"
-
 # Use Unicorn as the app server
 # gem 'unicorn'
 
