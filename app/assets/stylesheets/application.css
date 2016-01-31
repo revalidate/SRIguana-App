@@ -71,6 +71,10 @@ h1 span {
   height: 350px;
 }
 
+#stock_link {
+  padding-top: 132px;
+}
+
 
 h1 span.spacer {
    padding:0 5px;
