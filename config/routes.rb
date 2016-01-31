@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   get "/mutualfunds/:id/stocks", to: "stocks#index"
 
   # Future Route Setup For Users
+  get "/signup", to: "users#new", as: "new_user"
 end
