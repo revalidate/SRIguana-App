@@ -34,6 +34,9 @@ gem 'ffaker'
 #Pretty URLs
 gem 'friendly_id', '~> 5.1.0'
 
+#chartkick gem for pie chart data visualization
+gem "chartkick"
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
