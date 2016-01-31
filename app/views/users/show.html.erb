@@ -1,3 +1,11 @@
+<% flash.each do |name, msg| %>
+  <div class="alert <%= name == 'error' ? 'alert-danger' : 'alert-info' %>">
+    <div class="container">
+      <%= msg %>
+    </div>
+  </div>
+<% end %>
+
 <div>
   <img class="stock" src="/assets/exchange.jpg">
     <h1 class="overlay"><span>Welcome <%= @user.first_name %> <%= @user.last_name %></span></h1>
