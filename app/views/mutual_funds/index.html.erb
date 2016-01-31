@@ -8,6 +8,12 @@
   	<% @mutualfunds.each do |mutualfund| %>
 	 		<ul>
     		<li><strong>Name: </strong><%= link_to mutualfund.name, mutual_fund_path(mutualfund) %></li>
+    		<div class="container col-md-6">
+			<% @stocks = mutualfund.stocks %>
+    		<% @industry_counts = @stocks.group(:industry).count %>
+			<!-- pie chart via chartkick -->
+			<%= pie_chart(@industry_counts) %>
+		</div>
   		</ul>  
 		<% end %>
 	</div>
