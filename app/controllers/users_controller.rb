@@ -6,7 +6,8 @@ class UsersController < ApplicationController
 
   def create
     @user = User.create(user_params)
-    redirect_to @user
+    login(@user) # <-- login the user
+    redirect_to @user # <-- go to show    
   end
 
   def show

@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get "/users/:id", to: "users#show", as: "user"
 
   # Routes for Sessions
-  get "/login", to: "sessions#new"   
+  get "/login", to: "sessions#new", as: "new_session"   
+  get "/logout", to: "sessions#destroy", as: "destroy_session"
   post "/sessions", to: "sessions#create"     
 end
