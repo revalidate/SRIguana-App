@@ -2,26 +2,27 @@
   <img class="stock" src="/assets/exchange.jpg">
     <h1 class="overlay"><span>User Signup</span></h1>
 </div>
+
 <div class="container">
-<%= form_for @user, :html => {:class => "form-horizontal center-block"} do |f| %>
- <div class="form-group">
-    <%= f.label :first_name, "first name", class: "control-label" %>
-    <%= f.text_field :first_name, :required => true, class: "form-control" %>
-  </div>
- <div class="form-group">
-    <%= f.label :last_name, "last name", class: "control-label" %>
-    <%= f.text_field :last_name, :required => true, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :email, "email", class: " control-label" %>
-    <%= f.text_field :email, :required => true, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :password, "password", class: "control-label" %>
-    <%= f.password_field :password, :required => true, class: "form-control" %>
-  </div>  
-  <div class="form-group">
-    <%= f.submit "Submit", class: "btn btn-default  center-bl form-control" %> 
-  </div>
-<% end %>
+  <%= form_for @user, :html => {:class => "form-horizontal center-block"} do |f|%>
+    <div class="form-group">
+      <%= f.label :first_name, "first name", class: "control-label" %>
+      <%= f.text_field :first_name, :required => true, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :last_name, "last name", class: "control-label" %>
+      <%= f.text_field :last_name, :required => true, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :email, "email", class: " control-label" %>
+      <%= f.text_field :email, :required => true, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :password, "password", class: "control-label" %>
+      <%= f.password_field :password, :required => true, class: "form-control" %>
+    </div>  
+    <div class="form-group">
+      <%= f.submit "Submit", class: "btn btn-default  center-bl form-control" %>
+    </div>
+  <% end %>
 </div>
