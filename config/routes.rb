@@ -13,5 +13,6 @@ Rails.application.routes.draw do
   get "/users/:id", to: "users#show", as: "user"
 
   # Routes for Sessions
-  get "/login", to: "sessions#new"      
+  get "/login", to: "sessions#new"   
+  post "/sessions", to: "sessions#create"     
 end
