@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160131000707) do
+ActiveRecord::Schema.define(version: 20160201011202) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,6 +57,16 @@ ActiveRecord::Schema.define(version: 20160131000707) do
     t.datetime "updated_at",  null: false
   end
 
+  create_table "user_mutual_funds", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "mutual_fund_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  add_index "user_mutual_funds", ["mutual_fund_id"], name: "index_user_mutual_funds_on_mutual_fund_id", using: :btree
+  add_index "user_mutual_funds", ["user_id"], name: "index_user_mutual_funds_on_user_id", using: :btree
+
   create_table "users", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
@@ -68,4 +78,6 @@ ActiveRecord::Schema.define(version: 20160131000707) do
 
   add_foreign_key "mutual_fund_stocks", "mutual_funds"
   add_foreign_key "mutual_fund_stocks", "stocks"
+  add_foreign_key "user_mutual_funds", "mutual_funds"
+  add_foreign_key "user_mutual_funds", "users"
 end
