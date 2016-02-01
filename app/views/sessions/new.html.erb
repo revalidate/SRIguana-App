@@ -1,6 +1,6 @@
 <div>
   <img class="stock" src="/assets/exchange.jpg">
-    <h1 class="overlay"><span>User Signup</span></h1>
+    <h1 class="overlay"><span>User Login</span></h1>
 </div>
 <div class="container">
 <%= form_for @user, url: "/sessions", method: "post", :html => {:class => "col-lg-6 col-lg-offset-3"} do |f| %>
@@ -15,4 +15,10 @@
   <div class="form-group">
     <%= f.submit "Submit", class: "btn btn-default  center-bl form-control" %> 
   </div><% end %>
+</div>
+
+
+<br>
+<div>
+<p>Don't have an account? <a href="/signup">Click here</a> to sign up.</p>
 </div>
