@@ -75,6 +75,10 @@ h1 span {
   padding-top: 132px;
 }
 
+.profile_picture {
+  width: 200px;
+  height: 200px;
+}
 
 h1 span.spacer {
    padding:0 5px;
