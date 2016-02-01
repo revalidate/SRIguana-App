@@ -28,6 +28,14 @@
   font-size: 20px;
  }
 
+ .nav {
+  padding-right: 20px;
+ }
+
+ .form-control {
+  width: 50%;
+ }
+
 h1 span { 
    color: white; 
    font: bold 40px/60px Helvetica, Sans-Serif; 
@@ -61,6 +69,10 @@ h1 span {
 .stock {
   width: 100%;
   height: 350px;
+}
+
+#stock_link {
+  padding-top: 132px;
 }
 
 

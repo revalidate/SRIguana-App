@@ -1,5 +1,3 @@
-
-
 <div>
 	<img class="stock" src="/assets/stock.jpg">
 	  <h1 class="overlay"><span>Mutual Fund Portfolio</span></h1>
@@ -7,7 +5,8 @@
 </div>
 <div class="container">	
 	<div class="row">
-		<h3>Stocks In <%= @mutualfund.name %></h3>
+		<h1>Stocks In <%= @mutualfund.name %></h1>
+		<hr>
 			<br>
 			<div class="col-md-6">
 				<% @stocks.each do |stock| %>

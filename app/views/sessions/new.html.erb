@@ -1,11 +1,24 @@
-<h1>Login</h1>
+<div>
+  <img class="stock" src="/assets/exchange.jpg">
+    <h1 class="overlay"><span>User Login</span></h1>
+</div>
+<div class="container">
+<%= form_for @user, url: "/sessions", method: "post", :html => {:class => "col-lg-6 col-lg-offset-3"} do |f| %>
+  <div class="form-group">
+    <%= f.label :email, "email", class: " control-label" %>
+    <%= f.text_field :email, :required => true, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :password, "password", class: "control-label" %>
+    <%= f.password_field :password, :required => true, class: "form-control" %>
+  </div> 
+  <div class="form-group">
+    <%= f.submit "Submit", class: "btn btn-default  center-bl form-control" %> 
+  </div><% end %>
+</div>
 
-<%= form_for @user, url: "/sessions", method: "post" do |f| %>
-  <div>
-    <%= f.text_field :email, placeholder: "Email" %>
-  </div>
-  <div>
-    <%= f.password_field :password, placeholder: "Password" %>
-  </div>
-  <%= f.submit "Sign In" %>
-<% end %>
+
+<br>
+<div>
+<p>Don't have an account? <a href="/signup">Click here</a> to sign up.</p>
+</div>
