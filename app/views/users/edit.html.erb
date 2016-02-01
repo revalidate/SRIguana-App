@@ -1,12 +1,12 @@
-<% flash.each do |name, msg| %>
-  <div class="alert <%= name == 'error' ? 'alert-danger' : 'alert-info' %>">
-    <div class="container">
-      <%= msg %>
-    </div>
-  </div>
-<% end %>
-
 <div class="container funds">
+  <% flash.each do |name, msg| %>
+    <div class="alert <%= name == 'error' ? 'alert-danger' : 'alert-info' %>">
+      <div class="container">
+        <%= msg %>
+      </div>
+    </div>
+  <% end %>
+
 	<h1>Edit Profile</h1>
 	<hr>
   <%= form_for @user, :html => {:class => "form-horizontal center-block"} do |f|%>
