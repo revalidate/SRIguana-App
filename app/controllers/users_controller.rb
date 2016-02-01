@@ -2,9 +2,6 @@ class UsersController < ApplicationController
   before_action :logged_in?, only: [:show, :edit, :update]  
 
   def index
-  redirect_to new_user_path
-  flash[:notice] = "Email already exists"
-  #Quick fix for email uniqueness
   end
 
   def new
@@ -12,9 +9,16 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.create(user_params)
-    login(@user) 
-    redirect_to @user   
+    @user = User.new(user_params)
+
+    if @user.save
+      login(@user) 
+      redirect_to @user
+    else
+      flash[:error] = @user.errors.full_messages.join(", ")
+      redirect_to new_user_path
+    end
+
   end
 
   def show
