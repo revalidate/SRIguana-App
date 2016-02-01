@@ -23,6 +23,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.friendly.find(params[:id])
+    @mutualfunds = @user.mutual_funds
   end
 
   def edit

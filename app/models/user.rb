@@ -3,6 +3,9 @@ class User < ActiveRecord::Base
   include FriendlyId
   friendly_id :last_name
 
+  has_many :user_mutual_funds
+  has_many :mutual_funds, :through => :user_mutual_funds
+
   def self.confirm(params)
     @user = User.find_by({email: params[:email]})
     @user.try(:authenticate, params[:password])

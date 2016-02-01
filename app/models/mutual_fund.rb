@@ -4,4 +4,7 @@ class MutualFund < ActiveRecord::Base
 
 	has_many :mutual_fund_stocks
 	has_many :stocks, :through => :mutual_fund_stocks, dependent: :destroy
+
+	has_many :user_mutual_funds
+  has_many :users, :through => :user_mutual_funds
 end

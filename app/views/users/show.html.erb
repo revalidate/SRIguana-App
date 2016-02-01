@@ -32,5 +32,11 @@
           <%= button_to "Delete profile", @user, method: :delete, class: "btn btn-danger btn-lg"  %>
         <% end %>  
       </div>
+      <div>
+        <h1>Portfolio</h1>
+        <% @mutualfunds.each do |mf| %>
+        <%= link_to mf.name, mutual_fund_path(mf) %>
+        <% end %>
+      </div>
   </div>
 </div>
