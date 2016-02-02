@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
 
   has_secure_password
   include FriendlyId
-  friendly_id :last_name
+  friendly_id :last_name,:use => [:slugged]
 
   has_many :user_mutual_funds
   has_many :mutual_funds, :through => :user_mutual_funds
@@ -21,4 +21,5 @@ class User < ActiveRecord::Base
     @user = User.find_by({email: params[:email]})
     @user.try(:authenticate, params[:password])
   end  
+
 end
