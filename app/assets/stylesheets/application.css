@@ -40,6 +40,12 @@
   margin: 0 auto;
 }
 
+.users {
+  background-image: url(/assets/exchange.jpg);
+  background-size: cover;
+  height: 350px;
+}
+
 h1 span { 
    color: white; 
    font: bold 40px/60px Helvetica, Sans-Serif; 
