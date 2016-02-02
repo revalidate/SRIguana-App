@@ -3,7 +3,9 @@ class User < ActiveRecord::Base
     format: { with: /[^@\s]+@(?:[-a-z0-9]+\.)+[a-z]{2,}/i,
             message: 'format is invalid'}
 
-  validates :password, length: { in: 6...255}
+  validates :password, length: { in: 6...255},
+  #           :on => :create,
+             allow_blank: true          
 
   has_secure_password
   include FriendlyId

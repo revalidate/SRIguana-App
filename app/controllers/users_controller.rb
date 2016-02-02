@@ -36,7 +36,8 @@ class UsersController < ApplicationController
   end
 
   def update
-    @user = User.friendly.find(params[:id])
+    #binding.pry
+    @user = current_user #User.friendly.find(params[:id])
     if @user.update(user_params)
       redirect_to user_path(@user)
       flash[:notice] = "Successfully Updated Profile"
@@ -80,6 +81,9 @@ class UsersController < ApplicationController
 
   def set_user
     user_id = params[:id] || current_user.id
+      if params[:password] == nil
+
+      end
     @user = User.friendly.find(user_id)
   end
 
