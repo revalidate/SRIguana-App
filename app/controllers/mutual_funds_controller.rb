@@ -21,7 +21,18 @@ class MutualFundsController < ApplicationController
     else
       current_user = nil
     end
+  end
 
+  def search
+    @mutualfunds = MutualFund.all
+    if params[:search]
+      @mutualfunds = MutualFund.search(params[:search]).order("created_at DESC")
+      if @mutualfunds.present?
+        @mutualfunds
+      end
+    else
+      @mutualfunds = MutualFund.all.order('created_at DESC')
+    end    
   end
 
 end
