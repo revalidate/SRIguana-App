@@ -48,7 +48,7 @@ GEM
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
-    byebug (8.2.1)
+    byebug (8.2.2)
     chartkick (1.4.1)
     coderay (1.1.0)
     coffee-rails (4.1.1)
@@ -62,7 +62,7 @@ GEM
     debug_inspector (0.0.2)
     erubis (2.7.0)
     execjs (2.6.0)
-    ffaker (2.1.0)
+    ffaker (2.2.0)
     friendly_id (5.1.0)
       activerecord (>= 4.0.0)
     globalid (0.3.6)
@@ -190,4 +190,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.10.6
+   1.11.2
