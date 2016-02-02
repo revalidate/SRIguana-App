@@ -1,5 +1,6 @@
 <div class="users">
-  <h1 class="overlay"><span>Welcome <%= @user.first_name %> <%= @user.last_name %></span></h1></div>
+  <h1 class="overlay"><span>Welcome <%= @user.first_name %> <%= @user.last_name %></span></h1>
+</div>
 <% flash.each do |name, msg| %>
   <div class="alert <%= name == 'error' ? 'alert-danger' : 'alert-info' %>">
     <div class="container">
@@ -7,14 +8,12 @@
     </div>
   </div>
 <% end %>
-
-
 <div class="container">
   <div class="row">
     <div class="col-lg-5 col-lg-offset-4">
-  <h1>My Profile</h1>
-  <hr>
-      <div>
+      <h1>My Profile</h1>
+      <hr>
+    <div>
         <h3>Hello <%= @user.first_name %> <%= @user.last_name %></h3>
         <p>Welcome to your user page.</p>
       </div>
