@@ -1,7 +1,13 @@
 class MutualFundsController < ApplicationController
 
+
   def index
     @mutualfunds = MutualFund.all
+    @mutualfunds.each do |mf|
+    	@stocks = mf.stocks
+    	@industry_counts = @stocks.group(:industry).count
+    end
+
   end
 
   def show
@@ -9,8 +15,12 @@ class MutualFundsController < ApplicationController
     @stocks = @mutualfund.stocks
 
     @industry_counts = @stocks.group(:industry).count
-
-    render :show
+  
+    if current_user !=nil
+      @user = User.friendly.find(current_user.id)
+    else
+      current_user = nil
+    end
 
   end
 
