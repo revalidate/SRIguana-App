@@ -33,8 +33,12 @@
  }
 
  .form-control {
-  width: 50%;
+  width: 70%;
  }
+
+.center-content {
+  margin: 0 auto;
+}
 
 h1 span { 
    color: white; 
@@ -75,6 +79,10 @@ h1 span {
   padding-top: 132px;
 }
 
+.profile_picture {
+  width: 200px;
+  height: 200px;
+}
 
 h1 span.spacer {
    padding:0 5px;

@@ -58,6 +58,19 @@ class UsersController < ApplicationController
     end
   end
 
+  def add_mutual_fund
+    user = current_user
+    mutual_fund = MutualFund.friendly.find(params[:user][:mutual_fund_id])
+    
+    if user.mutual_funds.include?(mutual_fund)
+      flash[:notice] = "You already have this mutual fund in your portfolio"
+    else
+      user.mutual_funds << mutual_fund
+      flash[:notice] = "You have Successfully added a portfolio"
+    end
+    redirect_to mutual_fund_path(mutual_fund)
+  end
+
 
   private
 
@@ -67,7 +80,7 @@ class UsersController < ApplicationController
 
   def set_user
     user_id = params[:id] || current_user.id
-    @user = User.find_by_id(user_id)
+    @user = User.friendly.find(user_id)
   end
 
 end

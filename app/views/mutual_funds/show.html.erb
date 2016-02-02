@@ -4,6 +4,16 @@
 
 </div>
 <div class="container">	
+
+<!-- Flash Message -->
+  <% flash.each do |name, msg| %>
+    <div class="alert <%= name == 'error' ? 'alert-danger' : 'alert-info' %>">
+      <div class="container">
+        <%= msg %>
+      </div>
+    </div>
+  <% end %>
+
 	<div class="row">
 		<h1>Stocks In <%= @mutualfund.name %></h1>
 		<hr>
@@ -30,6 +40,21 @@
 		<div class="container col-md-6">
 			<!-- pie chart via chartkick -->
 			<%= pie_chart(@industry_counts) %>
+
+			<!--      Add MF to Portfolio button -->
+				
+<!-- 				TEST -->
+<!-- 				 button_to "Add to Portfolio", add_mutual_fund_path(@user) -->
+				
+<!-- 				REAL FORM THAT DOESNT WORK -->
+	  	<% if current_user != nil %>
+				<%= form_for @user, {url: add_mutual_fund_path(@user), method: :post} do |f|  %>
+					<%= f.hidden_field :id, :value => @user.id %>
+					<%= f.hidden_field :mutual_fund_id, :value => params[:id] %>
+					<%= f.submit "Add to Portfolio", class: "btn btn-default btn-purple form-control"  %>
+				<% end %>
+		 <% end %>
+ 
 		</div>
 	</div>
 

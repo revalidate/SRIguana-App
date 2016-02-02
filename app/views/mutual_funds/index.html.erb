@@ -7,14 +7,14 @@
   <div class="row">
   <div class="padding_50">  
   	<% @mutualfunds.each do |mutualfund| %>
-  <div class="row">
-    <div class="col-md-5">
-      <% @stocks = mutualfund.stocks %>
-        <% @industry_counts = @stocks.group(:industry).count %>
-      <!-- pie chart via chartkick -->
-      <%= pie_chart(@industry_counts) %></div>
-    <div class="col-md-7" id="stock_link"><%= link_to mutualfund.name, mutual_fund_path(mutualfund) %></div>
-  </div>    		 
+      <div class="row">
+        <div class="col-md-5">
+          <!-- pie chart via chartkick -->
+          <%= pie_chart(@industry_counts) %></div>
+        <div class="col-md-7" id="stock_link">
+          <%= link_to mutualfund.name, mutual_fund_path(mutualfund) %> 
+        </div>
+      </div>    		 
 		<% end %>
 	</div>
   </div>

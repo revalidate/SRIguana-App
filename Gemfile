@@ -37,6 +37,9 @@ gem 'friendly_id', '~> 5.1.0'
 #chartkick gem for pie chart data visualization
 gem "chartkick"
 
+# Annotate Schema Information will be Added as Commments on top of each model
+gem 'annotate'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
@@ -46,12 +49,15 @@ gem "chartkick"
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'better_errors'
 end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-
+  
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
