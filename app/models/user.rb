@@ -4,8 +4,11 @@ class User < ActiveRecord::Base
             message: 'format is invalid'}
 
   validates :password, length: { in: 6...255},
-  #           :on => :create,
-             allow_blank: true          
+             :on => :create
+                 
+  validates :password, length: { in: 6...255},
+             :on => :update,
+             allow_blank: true     
 
   has_secure_password
   include FriendlyId
