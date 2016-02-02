@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   patch "/users/:id", to: "users#update"
   delete "/users/:id", to: "users#destroy"
   post "/users/:id/mutualfunds", to: "users#add_mutual_fund", as: "add_mutual_fund"
+  delete "/users/:id/mutualfunds", to: "users#delete_mutual_fund", as: "delete_mutual_fund"
 
   # Routes for Sessions
   get "/login", to: "sessions#new", as: "new_session"   

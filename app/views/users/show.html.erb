@@ -1,6 +1,7 @@
 <div class="users">
   <h1 class="overlay"><span>Welcome <%= @user.first_name %> <%= @user.last_name %></span></h1>
 </div>
+
 <% flash.each do |name, msg| %>
   <div class="alert <%= name == 'error' ? 'alert-danger' : 'alert-info' %>">
     <div class="container">
@@ -8,12 +9,13 @@
     </div>
   </div>
 <% end %>
+
 <div class="container">
   <div class="row">
     <div class="col-lg-5 col-lg-offset-4">
       <h1>My Profile</h1>
       <hr>
-    <div>
+      <div>
         <h3>Hello <%= @user.first_name %> <%= @user.last_name %></h3>
         <p>Welcome to your user page.</p>
       </div>
@@ -34,14 +36,25 @@
         <% end %>  
       </div>
     </div>      
+
       <div class="panel panel-default">
         <h1>Portfolio</h1>
+
+        <!--  DISPLAYS ALL MF'S IN USER PORTFOLIO   -->
         <% @mutualfunds.each do |mf| %>
         <ul>
           <li><%= link_to mf.name, mutual_fund_path(mf) %></li>
+
+          <!--  FORM TO DELETE MF FROM USER PORTFOLIO   -->
+          <%= form_for @user, {url: delete_mutual_fund_path(@user), method: :delete} do |f|  %>
+            <%= f.hidden_field :id, :value => @user.id %>
+            <%= f.hidden_field :mutual_fund_id, :value => mf.id %>
+            <%= f.submit "Delete", class: "btn btn-default btn-purple form-control"  %>
+          <% end %>
         </ul>          
         <% end %>
+
       </div>
+    </div>
   </div>
-</div>
 </div>

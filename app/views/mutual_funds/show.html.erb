@@ -40,13 +40,8 @@
 		<div class="container col-md-6">
 			<!-- pie chart via chartkick -->
 			<%= pie_chart(@industry_counts) %>
-
-			<!--      Add MF to Portfolio button -->
 				
-<!-- 				TEST -->
-<!-- 				 button_to "Add to Portfolio", add_mutual_fund_path(@user) -->
-				
-<!-- 				REAL FORM THAT DOESNT WORK -->
+			<!--  FORM TO ADD MF TO USER PORTFOLIO   -->
 	  	<% if current_user != nil %>
 				<%= form_for @user, {url: add_mutual_fund_path(@user), method: :post} do |f|  %>
 					<%= f.hidden_field :id, :value => @user.id %>
