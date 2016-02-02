@@ -4,15 +4,16 @@
 </div>
 
 <div class="container">
-<!--   Flash Error Message -->
-  <% flash.each do |name, msg| %>
-    <div class="alert <%= name == 'error' ? 'alert-danger' : 'alert-info' %>">
-      <div class="container">
+  <div class="row">
+    <div class="col-lg-5 col-lg-offset-4">
+      <!--   Flash Error Message -->
+      <% flash.each do |name, msg| %>
+      <div class="alert <%= name == 'error' ? 'alert-danger' : 'alert-info' %>">
+        <div class="container">
         <%= msg %>
-      </div>
+        </div>
     </div>
-  <% end %>
-
+    <% end %>
   <%= form_for @user, :html => {:class => "form-horizontal center-block"} do |f|%>
     <div class="form-group">
       <%= f.label :first_name, "First Name", class: "control-label" %>
@@ -39,8 +40,9 @@
     </div>
   <% end %>
 </div>
+</div>
 
 <br>
-<div>
+
 <p> Already have an account? <a href="/login">Click here</a> to log in.</p>
 </div>

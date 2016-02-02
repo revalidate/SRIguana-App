@@ -1,14 +1,15 @@
-<div class="container funds">
-  <% flash.each do |name, msg| %>
-    <div class="alert <%= name == 'error' ? 'alert-danger' : 'alert-info' %>">
-      <div class="container">
-        <%= msg %>
+<div class="container">
+  <div class="row">
+      <div class="col-lg-5 col-lg-offset-4">
+        <% flash.each do |name, msg| %>
+          <div class="alert <%= name == 'error' ? 'alert-danger' : 'alert-info' %>">
+          <div class="container">
+            <%= msg %>
+          </div>
       </div>
-    </div>
-  <% end %>
-
-	<h1>Edit Profile</h1>
-	<hr>
+        <% end %>
+<h1>Edit Profile</h1>
+         <hr>	     
   <%= form_for @user, :html => {:class => "form-horizontal center-block"} do |f|%>
     <div class="form-group">
       <%= f.label :first_name, "first name", class: "control-label" %>
@@ -30,4 +31,6 @@
       <%= f.submit "Update Profile", class: "btn btn-default  center-bl form-control" %>
     </div>
   <% end %>
+</div>
+</div>
 </div>

@@ -33,8 +33,12 @@
  }
 
  .form-control {
-  width: 50%;
+  width: 70%;
  }
+
+.center-content {
+  margin: 0 auto;
+}
 
 h1 span { 
    color: white; 
