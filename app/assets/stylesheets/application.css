@@ -84,6 +84,10 @@ h1 span {
   height: 200px;
 }
 
+.panel-default {
+  padding: 25px;
+}
+
 h1 span.spacer {
    padding:0 5px;
 }
