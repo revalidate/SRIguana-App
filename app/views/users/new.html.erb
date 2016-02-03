@@ -1,17 +1,20 @@
 <div class="users">
-    <h1 class="overlay"><span>User Signup</span></h1>
+    <h1 class="overlay"><span>Signup</span></h1>
 </div>
+<% flash.each do |name, msg| %>
+  <div class="alert <%= name == 'error' ? 'alert-danger' : 'alert-info' %>">
+    <div class="container">
+      <%= msg %>
+    </div>
+  </div>
+<% end %>
+
 <div class="container">
   <div class="row">
-    <div class="col-lg-5 col-lg-offset-4">
-      <!--   Flash Error Message -->
-      <% flash.each do |name, msg| %>
-      <div class="alert <%= name == 'error' ? 'alert-danger' : 'alert-info' %>">
-        <div class="container">
-        <%= msg %>
-        </div>
-    </div>
-    <% end %>
+      <div class="col-lg-5 col-lg-offset-4">
+<h1>Signup</h1>
+  <hr>
+  <div>
   <%= form_for @user, :html => {:class => "form-horizontal center-block"} do |f|%>
     <div class="form-group">
       <%= f.label :first_name, "First Name", class: "control-label" %>
@@ -36,11 +39,9 @@
     <div class="form-group">
       <%= f.submit "Submit", class: "btn btn-default  center-bl form-control" %>
     </div>
-  <% end %>
+  <% end %>  
 </div>
 </div>
-
-<br>
-
-<p> Already have an account? <a href="/login">Click here</a> to log in.</p>
+</div>
+<p>Already have an account? <a href="/login">Click here</a> to log in.</p>
 </div>
