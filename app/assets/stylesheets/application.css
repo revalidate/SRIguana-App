@@ -10,13 +10,13 @@
  */
 
  .jumbotron {
- 	  background-image: url(/assets/homepage.jpg);
- 	  background-repeat: no-repeat;
- 	  height: 350px;
- 	  background-size: cover;
- 	  color:white;
- 	  text-align: center;
- 	  background-position: center center;
+   background-image: url(/assets/homepage.jpg);
+   background-repeat: no-repeat;
+   height: 350px;
+   background-size: cover;
+   color:white;
+   text-align: center;
+   background-position: center center;
  }
 
  .header {
@@ -44,6 +44,17 @@
   background-image: url(/assets/exchange.jpg);
   background-size: cover;
   height: 350px;
+}
+
+.img-circle {
+  border-radius: 50%;
+  height: 250px;
+  width: 250px;
+  padding: 10px;
+}
+
+.gif {
+  padding: 15px;
 }
 
 #mutualfunds {
