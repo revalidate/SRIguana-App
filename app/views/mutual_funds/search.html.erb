@@ -1,30 +1,33 @@
 <div>  
   <img class="mutual" src="/assets/ticker.jpg">
-  <h1 class="overlay"><span>Search for Mutual Funds</span></h1>
+  <h1 class="overlay"><span>Search for Mutual Funds by Industry</span></h1>
 </div>
 
+​
 <div class="container" id="mutualfunds">
   <div class="row">
     <div class="col-lg-5 col-lg-offset-4">
-      <%= form_tag(mutual_funds_search_path, :method => "get", id: "search-form") do %>
-        <%= text_field_tag :search, params[:search], placeholder: "Search by Mutual Funds" %>
-        <%= submit_tag "Search" %>
-      <% end %>
-  
-      <% if @mutualfunds.present? %>
-        <% @mutualfunds.each do |mf| %>
-          <div>
-            <h3><%= mf.name %></h3>
-            <% mf.stocks.each do |mf_s| %>
-             <p><%= mf_s.name %>
-             <%= mf_s.industry %></p>
-            <% end %>
-          </div>
-        <% end %> 
-      <% else %>
-          <p>Your search has no matches...</p>
+      
+<!--  Search Form -->
+
+      <%= form_tag(mf_search_path, :method => "get", id: "search-form") do %>
+	      <div class="form-group">
+	       	<%= label_tag :search, "Search Mutual Funds by Industry:", class:"control-label" %>
+	        <%= text_field_tag :search, params[:search], placeholder: "Oil, Technology, Finance", class:"form-control" %>
+	      </div>
+
+	      <div class="form-group">
+	        <%= submit_tag "Search", class: "btn btn-default  center-bl form-control" %>
+	      </div>
       <% end %>
 
+			<br>
+      <!-- PRINTS NAME OF EACH MF WITH GIVEN INDUSTRY -->
+			<% @mutualfunds.each do |x| %>
+				<h3> <%= x.name %> </h3>
+				<hr>
+			<% end %>
+  
     </div>
   </div> 
 </div>
