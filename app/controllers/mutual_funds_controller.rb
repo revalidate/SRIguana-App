@@ -7,7 +7,6 @@ class MutualFundsController < ApplicationController
     	@stocks = mf.stocks
     	@industry_counts = @stocks.group(:industry).count
     end
-
   end
 
   def show
@@ -21,7 +20,10 @@ class MutualFundsController < ApplicationController
     else
       current_user = nil
     end
+  end
 
+  def search
+    @mutualfunds = MutualFund.industry_in_mf(params[:search])
   end
 
 end
