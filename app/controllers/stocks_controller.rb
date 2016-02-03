@@ -3,4 +3,5 @@ class StocksController < ApplicationController
   	@stocks = Stock.all
   	redirect_to mutual_fund_path
   end
+
 end
