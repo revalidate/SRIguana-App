@@ -25,14 +25,19 @@ class MutualFundsController < ApplicationController
 
   def search
     @mutualfunds = MutualFund.all
+    @mutualfunds.each do |mf|
+      @stocks = mf.stocks
+      @industry_counts = @stocks.group(:industry).count
+    end
+
     if params[:search]
-      @mutualfunds = MutualFund.search(params[:search]).order("created_at DESC")
-      if @mutualfunds.present?
-        @mutualfunds
-      end
-    else
-      @mutualfunds = MutualFund.all.order('created_at DESC')
-    end    
+      @mutualfunds = MutualFund.search(params[:search]).order("created_at DESC") 
+    end  
+  end
+
+  def test
+    msg = { :status => "ok", :message => "Success!", :html => "<b>...</b>" }
+    format.json  { render :json => msg } 
   end
 
 end

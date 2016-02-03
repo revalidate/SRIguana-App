@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get "/mutualfunds/:id", to: "mutual_funds#show", as: "mutual_fund" 
   get "/mutualfunds/:id/stocks", to: "stocks#index"
   get "/search", to: "mutual_funds#search", as: "mutual_funds_search"
+  get "/api/mutualfunds/search", to: "mutualfunds#test"
 
   # Routes for Users
   get "/users", to: "users#index", as: "users"

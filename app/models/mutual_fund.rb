@@ -9,9 +9,7 @@ class MutualFund < ActiveRecord::Base
   has_many :users, :through => :user_mutual_funds
 
   def self.search(search)
-    where("name ILIKE ?", "%#{search}%") 
+    where("name ILIKE ?", "%#{search}%")
   end
 
 end
-
-
