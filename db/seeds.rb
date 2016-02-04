@@ -227,9 +227,9 @@ gap = Stock.create({
 
 kayvon.stocks << [amazon, google, facebook, phillip, altria, reynolds, vector, lorillard]
 thomas.stocks << [google, macy, amazon, gap, royal, microsoft]
-joe.stocks << [facebook, visa, amazon, google, exxon, royal, lorillard, jpm, wfc]
+joe.stocks << [facebook, visa, amazon, google, exxon, royal, jpm, wfc]
 
 ##########Quantity#################
 
-MutualFundStock.all.each {|x| x.quantity = 5; x.save}
+MutualFundStock.all.each {|x| x.quantity = rand(50); x.save}
 
