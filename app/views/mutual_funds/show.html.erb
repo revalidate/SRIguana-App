@@ -30,12 +30,6 @@
 				<% end %>
 			</div>
 
-			<!-- 			turns industry count to percentages manually - chartkick does this automatically for us -->
-			<% @industry_counts.each do |key, value| %>
-				<% @value = (value/@stocks.length.to_f)*100 %>
-				<% "#{key}: #{@value.round(2)}%" %>
-			<% end %>
-
 		<div class="container col-md-6">
 			<!-- pie chart via chartkick -->
 			<%= pie_chart(@industry_counts) %>

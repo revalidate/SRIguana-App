@@ -1,6 +1,5 @@
 class MutualFundsController < ApplicationController
 
-
   def index
     @mutualfunds = MutualFund.all
     @mutualfunds.each do |mf|
@@ -13,7 +12,7 @@ class MutualFundsController < ApplicationController
     @mutualfund = MutualFund.friendly.find(params[:id])
     @stocks = @mutualfund.stocks
 
-    @industry_counts = @stocks.group(:industry).count
+    @industry_counts = @mutualfund.stock_dollar_amounts_by_industry
   
     if current_user !=nil
       @user = User.friendly.find(current_user.id)
