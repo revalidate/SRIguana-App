@@ -10,9 +10,9 @@
  */
 
  .jumbotron {
-    margin-top: 23px;
+    margin-top: -5px;
  	  padding-top: 120px;
-    background-image: url("homepage.png");
+    background-image: url("http://i.imgur.com/s9hyJBM.png");
  	  background-repeat: no-repeat;
  	  height: 450px;
  	  background-size: cover;
@@ -24,6 +24,10 @@
  .header {
     padding-top: 30px;
  }
+
+ .navbar-default .navbar-brand {
+  color: #3c763d;
+}
 
 .navbar-brand {
   font-weight: bold;
