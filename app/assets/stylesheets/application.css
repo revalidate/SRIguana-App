@@ -10,15 +10,12 @@
  */
 
  .jumbotron {
-    margin-top: -5px;
- 	  padding-top: 120px;
-    background-image: url("http://i.imgur.com/s9hyJBM.png");
- 	  background-repeat: no-repeat;
- 	  height: 450px;
- 	  background-size: cover;
- 	  color: white;
- 	  text-align: center;
- 	  background-position: center center;
+  background-image: url(http://i.imgur.com/NFMZJAa.jpg?1);
+  background-repeat: no-repeat;
+  height: 465px;
+  color:white;
+  background-position: 50%;
+  background-color: white;
  }
 
  .header {
@@ -44,7 +41,6 @@
 
 .navbar-default .navbar-nav>li>a {
     color: white;
-    border
 }
 
  .nav {
@@ -117,10 +113,11 @@ h1 span {
 .stock {
   width: 100%;
   height: 350px;
+  padding-top: 100px;
 }
 
 #stock_link {
-  padding-top: 132px;
+  padding-top: 50px;
 }
 
 .profile_picture {
@@ -155,25 +152,31 @@ p {
 }
 
 
- body {
+body {
   font-size: 20px;
   height: 100%;
   width: 100%;
- }
+  background-color: #F2F2F2;  
+}
 
- p {
+p {
   padding: 20px;
  }
 
- li {
-    list-style-type: none;
+li {
+  list-style-type: none;
  }
+
+a {
+    color: black;
+    text-decoration: none;
+}
 
 #wrap {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -60px;
+  margin: -5px auto -60px;
   padding: 0 0 200px;
 }
 
@@ -182,10 +185,11 @@ p {
 }
 
 .footer {
-  background-color: black;
+  background-color: #19381F;
   color: white;
   height: 60px;
 }
+
 
 .copyright {
   position: absolute;

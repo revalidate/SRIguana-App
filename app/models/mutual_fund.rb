@@ -27,16 +27,13 @@ class MutualFund < ActiveRecord::Base
           SELECT stocks.id, name, industry, price, stocks.price*mutual_fund_stocks.quantity as total_price
             FROM "stocks"
               INNER JOIN "mutual_fund_stocks" "mutual_fund_stocks_stocks" ON "mutual_fund_stocks_stocks"."stock_id" = "stocks"."id"
-              INNER JOIN "mutual_fund_stocks" ON "stocks"."id" = "mutual_fund_stocks"."stock_id" WHERE "mutual_fund_stocks"."mutual_fund_id" = $1
+              INNER JOIN "mutual_fund_stocks" ON "stocks"."id" = "mutual_fund_stocks"."stock_id" WHERE "mutual_fund_stocks"."mutual_fund_id" = #{id}
           ) AS join_table
         GROUP BY industry;
     }
 
-    rails_env = ENV["RAILS_ENV"] || "development"
-    dbname = "fin_app_#{rails_env}"
+    res = ActiveRecord::Base.connection.execute(query)
 
-    @conn ||= PG.connect(dbname: dbname)
-    res = @conn.query(query, [id])
-    res.values.to_h
+    res.values.map { |industry,price| [industry, price.to_i] }.to_h
   end
 end

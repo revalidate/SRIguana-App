@@ -2,11 +2,10 @@ class MutualFundsController < ApplicationController
 
   def index
     @mutualfunds = MutualFund.all
-    @mutualfunds.each do |mf|
-    	@stocks = mf.stocks
-    	@industry_counts = @stocks.group(:industry).count
-      #Don't believe we need the code on line 6 or 7 anymore
-    end
+    # @mutualfunds.each do |mf|
+    # 	@stocks = mf.stocks
+    # 	@industry_counts = @stocks.group(:industry).count
+    # end
   end
 
   def show
