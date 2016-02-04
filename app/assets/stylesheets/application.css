@@ -10,20 +10,19 @@
  */
 
  .jumbotron {
-   background-image: url(/assets/homepage.jpg);
-   background-repeat: no-repeat;
-   height: 350px;
-   background-size: cover;
-   color:white;
-   text-align: center;
-   background-position: center center;
+  background-image: url(/assets/invest_tree.jpg);
+  background-repeat: no-repeat;
+  height: 465px;
+  color:white;
+  background-position: 50%;
+  background-color: white;
  }
 
  .header {
     padding-top: 30px;
  }
 
- .navbar-brand {
+ .navbar-default {
   font-weight: bold;
   font-size: 20px;
  }
@@ -32,8 +31,9 @@
   padding-right: 20px;
  }
 
- .form-control {
-  width: 70%;
+ .navbar-brand {
+  font-weight: bolder;
+  font-size: 25px;
  }
 
 .center-content {
@@ -63,7 +63,7 @@
 
 h1 span { 
    color: white; 
-   font: bold 40px/60px Helvetica, Sans-Serif; 
+   font: bold 40px/60px; 
    letter-spacing: -1px;  
    background: rgb(0, 0, 0); /* fallback color */
    background: rgba(0, 0, 0, 0.7);
@@ -85,6 +85,15 @@ h1 span {
 .overlay { 
   position: absolute; 
   top: 125px;
+}
+
+.overlay_title { 
+  position: absolute; 
+  top: 200px;
+}
+
+#right_column {
+    padding-bottom: 110px;
 }
 
 .funds {
@@ -113,14 +122,17 @@ h1 span.spacer {
    padding:0 5px;
 }
 
- html {
-  height: 100%;
-  width: 100%;
- }
- body {
+html {
+height: 100%;
+width: 100%;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;  
   font-size: 20px;
   height: 100%;
   width: 100%;
+  background-color: #e7e7e7;
  }
 
  p {
@@ -135,7 +147,7 @@ h1 span.spacer {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -60px;
+  margin: 0 auto 0px;
   padding: 0 0 200px;
 }
 
@@ -144,7 +156,7 @@ h1 span.spacer {
 }
 
 .footer {
-  background-color: black;
+  background-color: #19381F;
   color: white;
   height: 60px;
 }
