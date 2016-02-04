@@ -6,12 +6,20 @@ kayvon = MutualFund.create({
 	name: "Kayvon's Underpaid and Starving Children Mutual Fund"
 })
 
+# thomas = MutualFund.create({
+# 	name: "Thomas' Guns R Us Mutual Fund"
+# })
+
 thomas = MutualFund.create({
-	name: "Thomas' Guns R Us Mutual Fund"
+	name: "Bam! Bam! Thomas' 2 Gunz Mutual Fund"
 })
 
 joe = MutualFund.create({
 	name: "Joe's Underfluffed and Stuffingless Pillows Mutual Fund"
+})
+
+breon = MutualFund.create({
+	name: "Breon's Virtual Reality Cow Wrangling Simulator Mutual Fund"
 })
 
 ############## Technology ################

@@ -5,7 +5,9 @@ class User < ActiveRecord::Base
 
   validates :password, length: { in: 6...255},
              :on => :create
-                 
+        
+  #Created a separate validation for edit from to allow
+  #for password field to be blank         
   validates :password, length: { in: 6...255},
              :on => :update,
              allow_blank: true     
