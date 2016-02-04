@@ -14,14 +14,14 @@
   <% end %>
 
 	<div class="row">
-		<h1>Stocks In <%= @mutualfund.name %></h1>
+		<h2>Stocks In <%= @mutualfund.name %></h2>
 		<hr>
 			<br>
 			<div class="col-md-6">
 				<% @stocks.each do |stock| %>
 				<div class="stocks">
 					<ul>
-						<li><h2><%=stock.name %> (<%=stock.ticker %>) </h2></li>
+						<li><h3><%=stock.name %> (<%=stock.ticker %>) </h3></li>
 						<li><b>Industry: </b><%=stock.industry %></li>
 						<li><b>Description: </b><%=stock.description %></li>
 					</ul>

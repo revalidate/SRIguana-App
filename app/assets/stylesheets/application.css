@@ -10,10 +10,11 @@
  */
 
  .jumbotron {
- 	  padding-top: 200px;
-    background-image: url("homepage2.png");
+    margin-top: 23px;
+ 	  padding-top: 120px;
+    background-image: url("homepage.png");
  	  background-repeat: no-repeat;
- 	  height: 700px;
+ 	  height: 450px;
  	  background-size: cover;
  	  color: white;
  	  text-align: center;
@@ -25,7 +26,8 @@
  }
 
 .navbar-brand {
-  font-family: papyrus;
+  font-weight: bold;
+  font-size: 25px;
   color:white;
 }
 
@@ -38,6 +40,7 @@
 
 .navbar-default .navbar-nav>li>a {
     color: white;
+    border
 }
 
  .nav {
@@ -53,7 +56,6 @@
 }
 
 .users {
-  background-image: url(/assets/exchange.jpg);
   background-size: cover;
   height: 350px;
 }
@@ -69,13 +71,17 @@
   padding-top: 75px;
 }
 
-h1 span { 
+#right_column {
+  padding-bottom: 110px;
+}
+
+h1 span {
    font-family: 'Alegreya Sans SC', sans-serif;
    color: #87C73C; 
    font: bold 40px/60px; 
    letter-spacing: -1px;  
    padding: 20px; 
-   padding-right: 400px;
+   padding-right: 500px;
 
 }
 
@@ -125,6 +131,10 @@ h1 span.spacer {
 h2 {
   font-family: 'Questrial', sans-serif;
   font-weight: bold;
+}
+
+h3 {
+  font-family: 'Questrial', sans-serif;
 }
 
  html {
