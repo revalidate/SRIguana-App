@@ -19,10 +19,13 @@
       </div>
 
       <div>
+      <br>
         <ul>
-          <li><b>name: </b><%= @user.first_name %> <%= @user.last_name %></li>
-          <li><b>email: </b><%= @user.email %></li>
+          <li><b>Name: </b><%= @user.first_name %> <%= @user.last_name %></li>
+          <li><b>Email: </b><%= @user.email %></li>
         </ul>
+        <br> 
+        <br>  
         <% if current_user == @user %>
         <div class="btn-group">
 
@@ -34,7 +37,8 @@
           <%= button_to "Delete profile", @user, {method: :delete, data: {confirm: "Are you sure you want to delete your account?"}, class: "btn btn-danger btn-lg"}  %>
         <% end %>  
       </div>
-    </div>      
+    </div>   
+    <hr>   
       <br>      
       <div>
         <h2>My Mutual Funds' Portfolio</h2>
@@ -43,14 +47,14 @@
         <% @mutualfunds.each do |mf| %>
         <ul>
           <li><%= link_to mf.name, mutual_fund_path(mf) %></li>
-
+        </ul>
+        <br>
           <!--  FORM TO DELETE MF FROM USER PORTFOLIO   -->
           <%= form_for @user, {url: delete_mutual_fund_path(@user), method: :delete} do |f|  %>
             <%= f.hidden_field :id, :value => @user.id %>
             <%= f.hidden_field :mutual_fund_id, :value => mf.id %>
             <%= f.submit "Delete",data: { confirm: "Are you sure?" }, class: "btn btn-default btn-purple form-control"  %>
           <% end %>
-        </ul>          
         <% end %>
 
       </div>

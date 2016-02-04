@@ -1,17 +1,18 @@
 <div class="jumbotron">
     <h1 class="overlay"><span>Mutual Funds</span></h1>
 </div>
-
 <div class="container">
-  <div class="row" id="mutualfunds">
-    <div class="panel panel-default">
-      <% @mutualfunds.each do |mutualfund| %>
-      <div class="row">
-        <div class="col-md-7" id="stock_link">
-          <p><%= link_to mutualfund.name, mutual_fund_path(mutualfund) %></p>
+  <div class="row">
+    <div id="stock_link">
+      <div class="panel panel-default">
+        <% @mutualfunds.each do |mutualfund| %>
+          <ul>
+            <li><%= link_to mutualfund.name, mutual_fund_path(mutualfund) %></li>
+          </ul>  
           <hr>
-        </div>   		 
-		<% end %>
+		        <% end %>
+        </div>
     </div>
-</div>
-</div>
+  </div>
+</div>    
+
