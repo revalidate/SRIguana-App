@@ -16,7 +16,7 @@ class SessionsController < ApplicationController
   end 
 
   def destroy
-    logout # this method lives in the SessionsHelper!
+    logout
     redirect_to root_path
   end   
 end

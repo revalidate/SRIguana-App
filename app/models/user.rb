@@ -5,7 +5,9 @@ class User < ActiveRecord::Base
 
   validates :password, length: { in: 6...255},
              :on => :create
-                 
+        
+  #Created a separate validation for edit from to allow
+  #for password field to be blank         
   validates :password, length: { in: 6...255},
              :on => :update,
              allow_blank: true     
@@ -15,7 +17,7 @@ class User < ActiveRecord::Base
   friendly_id :last_name,:use => [:slugged]
 
   has_many :user_mutual_funds
-  has_many :mutual_funds, :through => :user_mutual_funds
+  has_many :mutual_funds, :through => :user_mutual_funds, dependent: :destroy
 
   def self.confirm(params)
     @user = User.find_by({email: params[:email]})
