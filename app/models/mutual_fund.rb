@@ -8,8 +8,8 @@ class MutualFund < ActiveRecord::Base
 	has_many :user_mutual_funds
   has_many :users, :through => :user_mutual_funds
 
+  #returns all the mutual funds that include a stock within a given industry
   def self.industry_in_mf(industry)
-  	#returns all the mutual funds that include a stock within a given industry
   	joins(:stocks).where(stocks: {industry: industry}).uniq
   end
 
@@ -17,8 +17,9 @@ class MutualFund < ActiveRecord::Base
     where("industry ILIKE ?", "%#{search}%")
   end
 
-  # returns a hash
-  # => {"Technology"=>33.49, "Vidya"=>60.88}
+  #Code we got from Nathan, returns a hash showing all industries and
+  #the total dollar amount invested associated with each industry
+  # => {"Technology"=>"33.49", "Oil"=>"60.88"}
   def stock_dollar_amounts_by_industry
     query = %{
       SELECT industry, SUM(total_price) as total_stock_dollar_amount

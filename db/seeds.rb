@@ -1,3 +1,4 @@
+User.destroy_all
 MutualFund.destroy_all
 Stock.destroy_all
 MutualFundStock.destroy_all
@@ -6,12 +7,28 @@ kayvon = MutualFund.create({
 	name: "Kayvon's Underpaid and Starving Children Mutual Fund"
 })
 
+# thomas = MutualFund.create({
+# 	name: "Thomas' Guns R Us Mutual Fund"
+# })
+
 thomas = MutualFund.create({
-	name: "Thomas' Guns R Us Mutual Fund"
+	name: "Bam! Bam! Thomas' 2 Gunz Mutual Fund"
 })
 
 joe = MutualFund.create({
 	name: "Joe's Underfluffed and Stuffingless Pillows Mutual Fund"
+})
+
+breon = MutualFund.create({
+	name: "Breon's Virtual Reality Cow Wrangling Simulator Mutual Fund"
+})
+
+noah = MutualFund.create({
+	name: "Noah's Two Kids and One Grown Man Poking Trials Mutual Fund"
+})
+
+rich = MutualFund.create({
+	name: "Rich Using Maps API Creatively Mutual Fund"
 })
 
 ############## Technology ################
@@ -228,6 +245,9 @@ gap = Stock.create({
 kayvon.stocks << [amazon, google, facebook, phillip, altria, reynolds, vector, lorillard]
 thomas.stocks << [google, macy, amazon, gap, royal, microsoft]
 joe.stocks << [facebook, visa, amazon, google, exxon, royal, jpm, wfc]
+breon.stocks << [jpm, nike, citi, eog, royal, microsoft, apple]
+noah.stocks << [chevron, facebook, valero, macy, underarmour]
+rich.stocks << [exxon, wfc, jpm, eog, nike, nordstrom]
 
 ##########Quantity#################
 
