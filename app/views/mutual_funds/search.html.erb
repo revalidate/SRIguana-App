@@ -1,6 +1,5 @@
-<div>  
-  <img class="mutual" src="/assets/ticker.jpg">
-  <h1 class="overlay"><span>Search for Mutual Funds by Industry</span></h1>
+<div class="jumbotron">
+		<h1 class="overlay"><span>Search</span></h1>
 </div>
 
 ​
@@ -24,7 +23,7 @@
 			<br>
       <!-- PRINTS NAME OF EACH MF WITH GIVEN INDUSTRY -->
 			<% @mutualfunds.each do |x| %>
-				<h3> <%= x.name %> </h3>
+				<p> <%= link_to x.name, mutual_fund_path(x) %> </p>
 				<hr>
 			<% end %>
   

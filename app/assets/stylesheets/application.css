@@ -10,23 +10,38 @@
  */
 
  .jumbotron {
-   background-image: url(/assets/homepage.jpg);
-   background-repeat: no-repeat;
-   height: 350px;
-   background-size: cover;
-   color:white;
-   text-align: center;
-   background-position: center center;
+    margin-top: 23px;
+ 	  padding-top: 120px;
+    background-image: url("homepage.png");
+ 	  background-repeat: no-repeat;
+ 	  height: 450px;
+ 	  background-size: cover;
+ 	  color: white;
+ 	  text-align: center;
+ 	  background-position: center center;
  }
 
  .header {
     padding-top: 30px;
  }
 
- .navbar-brand {
+.navbar-brand {
+  font-weight: bold;
+  font-size: 25px;
+  color:white;
+}
+
+.navbar-default {
+  font-family: 'Rajdhani', sans-serif;
   font-weight: bold;
   font-size: 20px;
+  background-color: #87C73C;
  }
+
+.navbar-default .navbar-nav>li>a {
+    color: white;
+    border
+}
 
  .nav {
   padding-right: 20px;
@@ -41,15 +56,14 @@
 }
 
 .users {
-  background-image: url(/assets/exchange.jpg);
   background-size: cover;
   height: 350px;
 }
 
 .img-circle {
   border-radius: 50%;
-  height: 250px;
-  width: 250px;
+  max-width: 250px;
+  max-height: 250px;
   padding: 10px;
 }
 
@@ -61,13 +75,18 @@
   padding-top: 75px;
 }
 
-h1 span { 
-   color: white; 
-   font: bold 40px/60px Helvetica, Sans-Serif; 
+#right_column {
+  padding-bottom: 110px;
+}
+
+h1 span {
+   font-family: 'Alegreya Sans SC', sans-serif;
+   color: #87C73C; 
+   font: bold 40px/60px; 
    letter-spacing: -1px;  
-   background: rgb(0, 0, 0); /* fallback color */
-   background: rgba(0, 0, 0, 0.7);
    padding: 20px; 
+   padding-right: 500px;
+
 }
 
 .text_overlay { 
@@ -82,10 +101,10 @@ h1 span {
   width: 100%;
 }
 
-.overlay { 
+/*.overlay { 
   position: absolute; 
-  top: 125px;
-}
+  top: 210px;
+}*/
 
 .funds {
   padding-top: 75px;
@@ -113,10 +132,25 @@ h1 span.spacer {
    padding:0 5px;
 }
 
+h2 {
+  font-family: 'Questrial', sans-serif;
+  font-weight: bold;
+}
+
+h3 {
+  font-family: 'Questrial', sans-serif;
+}
+
  html {
   height: 100%;
   width: 100%;
  }
+
+p {
+  font-family: 'Open Sans', sans-serif;
+}
+
+
  body {
   font-size: 20px;
   height: 100%;
