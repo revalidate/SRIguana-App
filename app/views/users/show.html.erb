@@ -19,10 +19,12 @@
       </div>
 
       <div>
+      <br>
         <ul>
           <li><b>Name: </b><%= @user.first_name %> <%= @user.last_name %></li>
           <li><b>Email: </b><%= @user.email %></li>
         </ul>
+        <br> 
         <br>  
         <% if current_user == @user %>
         <div class="btn-group">
