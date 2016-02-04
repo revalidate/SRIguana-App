@@ -1,5 +1,5 @@
-<div class="users">
-  <h1 class="overlay"><span>Welcome <%= @user.first_name %> <%= @user.last_name %></span></h1>
+<div class="jumbotron">
+    <h1 class="overlay"><span>Welcome, <%= @user.first_name %> <%= @user.last_name %></span></h1>
 </div>
 
 <% flash.each do |name, msg| %>
@@ -13,16 +13,15 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-5 col-lg-offset-4">
-      <h1>My Profile</h1>
-      <hr>
       <div>
-        <h3>Hello <%= @user.first_name %> <%= @user.last_name %></h3>
+        <h2>My Profile</h2>
         <p>Welcome to your user page.</p>
       </div>
-      <div class="panel panel-default">
+
+      <div>
         <ul>
-          <li>Name: <%= @user.first_name %> <%= @user.last_name %></li>
-          <li>Email: <%= @user.email %></li>
+          <li><b>name: </b><%= @user.first_name %> <%= @user.last_name %></li>
+          <li><b>email: </b><%= @user.email %></li>
         </ul>
         <% if current_user == @user %>
         <div class="btn-group">
@@ -32,13 +31,13 @@
           </a>
         </div>
         <div class="btn-group">
-          <%= button_to "Delete profile", @user, method: :delete, class: "btn btn-danger btn-lg"  %>
+          <%= button_to "Delete profile", @user, {method: :delete, data: {confirm: "Are you sure you want to delete your account?"}, class: "btn btn-danger btn-lg"}  %>
         <% end %>  
       </div>
     </div>      
-
-      <div class="panel panel-default">
-        <h1>Portfolio</h1>
+      <br>      
+      <div>
+        <h2>My Mutual Funds' Portfolio</h2>
 
         <!--  DISPLAYS ALL MF'S IN USER PORTFOLIO   -->
         <% @mutualfunds.each do |mf| %>
@@ -49,12 +48,13 @@
           <%= form_for @user, {url: delete_mutual_fund_path(@user), method: :delete} do |f|  %>
             <%= f.hidden_field :id, :value => @user.id %>
             <%= f.hidden_field :mutual_fund_id, :value => mf.id %>
-            <%= f.submit "Delete", class: "btn btn-default btn-purple form-control"  %>
+            <%= f.submit "Delete",data: { confirm: "Are you sure?" }, class: "btn btn-default btn-purple form-control"  %>
           <% end %>
         </ul>          
         <% end %>
 
       </div>
+
     </div>
   </div>
 </div>

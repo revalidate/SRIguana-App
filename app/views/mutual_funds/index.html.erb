@@ -1,6 +1,5 @@
-<div>  
-  <img class="mutual" src="/assets/ticker.jpg">
-  <h1 class="overlay"><span>Mutual Funds</span></h1>
+<div class="jumbotron">
+    <h1 class="overlay"><span>Mutual Funds</span></h1>
 </div>
 
 <div class="container">
@@ -8,14 +7,10 @@
     <div class="panel panel-default">
       <% @mutualfunds.each do |mutualfund| %>
       <div class="row">
-        <div class="col-md-5">
-          <!-- pie chart via chartkick -->
-          <%= pie_chart(@industry_counts) %></div>
         <div class="col-md-7" id="stock_link">
-          <%= link_to mutualfund.name, mutual_fund_path(mutualfund) %> 
+          <p><%= link_to mutualfund.name, mutual_fund_path(mutualfund) %></p>
           <hr>
-        </div>
-      </div>    		 
+        </div>   		 
 		<% end %>
     </div>
 </div>
