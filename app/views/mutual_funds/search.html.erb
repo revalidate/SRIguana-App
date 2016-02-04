@@ -5,7 +5,7 @@
 ​
 <div class="container" id="mutualfunds">
   <div class="row">
-    <div class="col-lg-5 col-lg-offset-4">
+    <div>
       
 <!--  Search Form -->
 
@@ -22,11 +22,18 @@
 
 			<br>
       <!-- PRINTS NAME OF EACH MF WITH GIVEN INDUSTRY -->
+<div class="container">
+  <div class="row">
+    <div class="panel panel-default">    
 			<% @mutualfunds.each do |x| %>
-				<p> <%= link_to x.name, mutual_fund_path(x) %> </p>
+			<ul>	
+        <li><%= link_to x.name, mutual_fund_path(x) %></li>
 				<hr>
+      </ul>  
 			<% end %>
-  
-    </div>
-  </div> 
+    </div>  
+</div> 
+</div>
+</div>
+</div>
 </div>
