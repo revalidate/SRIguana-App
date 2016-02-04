@@ -1,5 +1,5 @@
-<div class="users">
-  <h1 class="overlay"><span>Welcome <%= @user.first_name %> <%= @user.last_name %></span></h1>
+<div class="jumbotron">
+    <h1 class="overlay"><span>Welcome, <%= @user.first_name %> <%= @user.last_name %></span></h1>
 </div>
 
 <% flash.each do |name, msg| %>
@@ -19,7 +19,7 @@
         <h3>Hello <%= @user.first_name %> <%= @user.last_name %></h3>
         <p>Welcome to your user page.</p>
       </div>
-      <div class="panel panel-default">
+      <div>
         <ul>
           <li>Name: <%= @user.first_name %> <%= @user.last_name %></li>
           <li>Email: <%= @user.email %></li>
@@ -37,7 +37,7 @@
       </div>
     </div>      
 
-      <div class="panel panel-default">
+      <div>
         <h1>Portfolio</h1>
 
         <!--  DISPLAYS ALL MF'S IN USER PORTFOLIO   -->

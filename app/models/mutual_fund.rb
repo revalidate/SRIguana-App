@@ -17,15 +17,4 @@ class MutualFund < ActiveRecord::Base
     where("industry ILIKE ?", "%#{search}%")
   end
 
-  # def industry_
-  	#how you calculate metric that actually represents percentages of industries per mutual fund
-  # end
-
-  # def last_method
-  # end
-
-  # def self.search(search)
-  #   where("industry ILIKE ?", "%#{search}%")
-  # end
-
 end

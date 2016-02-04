@@ -1,8 +1,7 @@
-<div>
-	<img class="stock" src="/assets/stock.jpg">
-	  <h1 class="overlay"><span>Mutual Fund Portfolio</span></h1>
-
+<div class="jumbotron">
+		<h1 class="overlay"><span>Mutual Fund Portfolio</span></h1>
 </div>
+
 <div class="container">	
 
 <!-- Flash Message -->
@@ -22,11 +21,11 @@
 				<% @stocks.each do |stock| %>
 				<div class="stocks">
 					<ul>
-						<li><strong>Name</strong>: <%=stock.name %></li>
-						<li><strong>Ticker</strong>: <%=stock.ticker %></li>
-						<li><strong>Industry</strong>: <%=stock.industry %></li>
-						<li><strong>Description</strong>: <%=stock.description %></li>
+						<li><h2><%=stock.name %> (<%=stock.ticker %>) </h2></li>
+						<li><b>Industry: </b><%=stock.industry %></li>
+						<li><b>Description: </b><%=stock.description %></li>
 					</ul>
+					<br>
 				</div>	
 				<% end %>
 			</div>
