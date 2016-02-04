@@ -32,7 +32,7 @@
           </a>
         </div>
         <div class="btn-group">
-          <%= button_to "Delete profile", @user, method: :delete, class: "btn btn-danger btn-lg"  %>
+          <%= button_to "Delete profile", @user, {method: :delete, data: {confirm: "Are you sure you want to delete your account?"}, class: "btn btn-danger btn-lg"}  %>
         <% end %>  
       </div>
     </div>      
@@ -49,7 +49,7 @@
           <%= form_for @user, {url: delete_mutual_fund_path(@user), method: :delete} do |f|  %>
             <%= f.hidden_field :id, :value => @user.id %>
             <%= f.hidden_field :mutual_fund_id, :value => mf.id %>
-            <%= f.submit "Delete", class: "btn btn-default btn-purple form-control"  %>
+            <%= f.submit "Delete",data: { confirm: "Are you sure?" }, class: "btn btn-default btn-purple form-control"  %>
           <% end %>
         </ul>          
         <% end %>
