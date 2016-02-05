@@ -14,7 +14,7 @@ class MutualFund < ActiveRecord::Base
   end
 
   def self.search(search)
-    where("industry ILIKE ?", "%#{search}%")
+    joins(:stocks).where("industry ILIKE ?", "%#{search}%")
   end
 
   #Code we got from Nathan, returns a hash showing all industries and

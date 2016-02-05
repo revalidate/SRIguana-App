@@ -55,7 +55,7 @@ Endpoint | Method | Route | Data
   end
 
   def self.search(search)
-    where("industry ILIKE ?", "%#{search}%")
+    joins(:stocks).where("industry ILIKE ?", "%#{search}%")
   end
 ```
 
