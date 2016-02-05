@@ -14,7 +14,7 @@
 		<hr>
 			<br>
 			<div class="col-md-6">
-				<% @stocks.each do |stock| %>
+				<% @mutualfund.stocks.each do |stock| %>
 				<div class="stocks">
 					<ul>
 						<li><h3><%=stock.name %> (<%=stock.ticker %>) </h3></li>
@@ -29,12 +29,12 @@
 		<div class="container col-md-6">
 			<!-- pie chart via chartkick -->
 			<!-- Should show each industry with total dollar investment -->
-			<%= pie_chart(@industry_counts) %>
+			<%= pie_chart(@mutualfund.stock_dollar_amounts_by_industry) %>
 
 			<!--  FORM TO ADD MF TO USER PORTFOLIO   -->
-	  	<% if current_user != nil %>
-				<%= form_for @user, {url: add_mutual_fund_path(@user), method: :post} do |f|  %>
-					<%= f.hidden_field :id, :value => @user.id %>
+	  	<% if current_user %>
+				<%= form_for current_user, {url: add_mutual_fund_path(current_user), method: :post} do |f|  %>
+					<%= f.hidden_field :id, :value => current_user.id %>
 					<%= f.hidden_field :mutual_fund_id, :value => params[:id] %>
 					<%= f.submit "Add to Portfolio", class: "btn btn-default btn-purple form-control"  %>
 				<% end %>
