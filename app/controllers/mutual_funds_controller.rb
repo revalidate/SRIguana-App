@@ -16,7 +16,8 @@ class MutualFundsController < ApplicationController
 
   def search
     @title = "Search"
-    @mutualfunds = MutualFund.industry_in_mf(params[:search])
+    @mutualfunds = MutualFund.stocks_for_industry(params[:search])
+    #TODO: What if params[:search] is empty? 1 letter?
   end
 
 end

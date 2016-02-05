@@ -50,7 +50,7 @@ Endpoint | Method | Route | Data
 	* second class method allows user to search Mutual Fund model by industry
 
 ```
-  def self.industry_in_mf(industry)
+  def self.stocks_for_industry(industry)
   	joins(:stocks).where(stocks: {industry: industry}).uniq
   end
 
