@@ -20,6 +20,14 @@
       <%= render "shared/navbar" %>
     </div>
 
+    <% flash.each do |name, msg| %>
+      <div class="alert <%= name == 'error' ? 'alert-danger' : 'alert-info' %>">
+        <div class="container">
+          <%= msg %>
+        </div>
+      </div>
+    <% end %>
+
     <div class="jumbotron">
         <h1 class="overlay"><span><%= @title %></span></h1>
     </div>
