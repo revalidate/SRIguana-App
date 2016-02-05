@@ -1,18 +1,19 @@
 class UsersController < ApplicationController
-  before_action :logged_in?, only: [:show, :edit, :update]  
+  before_action :logged_in?, only: [:show, :edit, :update]
 
   def index
   end
 
   def new
     @user = User.new
+    @title = "Sign Up"
   end
 
   def create
     @user = User.new(user_params)
 
     if @user.save
-      login(@user) 
+      login(@user)
       redirect_to @user
     else
       flash[:error] = @user.errors.full_messages.join(", ")
@@ -23,10 +24,12 @@ class UsersController < ApplicationController
 
   def show
     @user = User.friendly.find(params[:id])
+    @title = "Welcome, #{@user.first_name} #{@user.last_name} "
     @mutualfunds = @user.mutual_funds
   end
 
   def edit
+    @title = "Edit Profile"
     if current_user == set_user
       render :edit
     else
@@ -61,7 +64,7 @@ class UsersController < ApplicationController
   def add_mutual_fund
     user = current_user
     mutual_fund = MutualFund.friendly.find(params[:user][:mutual_fund_id])
-    
+
     if user.mutual_funds.include?(mutual_fund)
       flash[:notice] = "You already have this mutual fund in your portfolio"
     else
@@ -70,7 +73,7 @@ class UsersController < ApplicationController
     end
     redirect_to mutual_fund_path(mutual_fund)
   end
-  
+
   def delete_mutual_fund
     user = current_user
     mutual_fund = MutualFund.friendly.find(params[:user][:mutual_fund_id])

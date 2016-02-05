@@ -1,8 +1,4 @@
-<div class="jumbotron">
-		<h1 class="overlay"><span>Portfolio</span></h1>
-</div>
-
-<div class="container">	
+<div class="container">
 
 <!-- Flash Message -->
   <% flash.each do |name, msg| %>
@@ -26,7 +22,7 @@
 						<li><b>Description: </b><%=stock.description %></li>
 					</ul>
 					<br>
-				</div>	
+				</div>
 				<% end %>
 			</div>
 
@@ -34,7 +30,7 @@
 			<!-- pie chart via chartkick -->
 			<!-- Should show each industry with total dollar investment -->
 			<%= pie_chart(@industry_counts) %>
-				
+
 			<!--  FORM TO ADD MF TO USER PORTFOLIO   -->
 	  	<% if current_user != nil %>
 				<%= form_for @user, {url: add_mutual_fund_path(@user), method: :post} do |f|  %>
@@ -43,9 +39,9 @@
 					<%= f.submit "Add to Portfolio", class: "btn btn-default btn-purple form-control"  %>
 				<% end %>
 		 <% end %>
- 
+
 		</div>
 	</div>
 
-</div>	
+</div>
 

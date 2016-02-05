@@ -1,12 +1,7 @@
-<div class="jumbotron">
-		<h1 class="overlay"><span>Search</span></h1>
-</div>
-
-​
 <div class="container" id="mutualfunds">
   <div class="row">
     <div>
-      
+
 <!--  Search Form -->
 
       <%= form_tag(mf_search_path, :method => "get", id: "search-form") do %>
@@ -24,15 +19,15 @@
       <!-- PRINTS NAME OF EACH MF WITH GIVEN INDUSTRY -->
 <div class="container">
   <div class="row">
-    <div class="panel panel-default">    
+    <div class="panel panel-default">
 			<% @mutualfunds.each do |x| %>
-			<ul>	
+			<ul>
         <li><%= link_to x.name, mutual_fund_path(x) %></li>
 				<hr>
-      </ul>  
+      </ul>
 			<% end %>
-    </div>  
-</div> 
+    </div>
+</div>
 </div>
 </div>
 </div>

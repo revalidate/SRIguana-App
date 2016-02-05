@@ -13,21 +13,27 @@
 	<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300|Merriweather:400,300|Inconsolata:400,700|Maven+Pro|Questrial|Viga|Rajdhani:400,500|Open+Sans:400,700|Cinzel|Cinzel+Decorative|Alegreya+Sans+SC|Martel+Sans' rel='stylesheet' type='text/css'>>
 </head>
 <body>
-<!-- navbar -->
-<div id="wrap">	
-	<div class="container" id="center-content">
-	  
-	</br>  
-	  <%= render "shared/navbar" %>
-	</div>
-	
-<%= yield %>
-</div>
-<footer class="footer">
-  <div class="container">
-    <p class="copyright">&copy; 2016 SRIguana</p>
+  <div id="wrap">
+    <!-- navbar -->
+    <div class="container" id="center-content">
+      </br>
+      <%= render "shared/navbar" %>
+    </div>
+
+    <div class="jumbotron">
+        <h1 class="overlay"><span><%= @title %></span></h1>
+    </div>
+
+    <%= yield %>
+
   </div>
-</footer>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="copyright">&copy; 2016 SRIguana</p>
+    </div>
+  </footer>
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
