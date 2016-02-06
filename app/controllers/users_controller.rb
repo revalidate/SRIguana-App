@@ -62,24 +62,22 @@ class UsersController < ApplicationController
   end
 
   def add_mutual_fund
-    user = current_user
     mutual_fund = MutualFund.friendly.find(params[:user][:mutual_fund_id])
 
-    if user.mutual_funds.include?(mutual_fund)
+    if current_user.mutual_funds.include?(mutual_fund)
       flash[:notice] = "You already have this mutual fund in your portfolio"
     else
-      user.mutual_funds << mutual_fund
+      current_user.mutual_funds << mutual_fund
       flash[:notice] = "You have successfully added a portfolio"
     end
     redirect_to mutual_fund_path(mutual_fund)
   end
 
   def delete_mutual_fund
-    user = current_user
     mutual_fund = MutualFund.friendly.find(params[:user][:mutual_fund_id])
-    user.mutual_funds.delete(mutual_fund)
+    current_user.mutual_funds.delete(mutual_fund)
     flash[:notice] = "You have successfully deleted your portfolio"
-    redirect_to user_path(user)
+    redirect_to user_path(current_user)
   end
 
   private
