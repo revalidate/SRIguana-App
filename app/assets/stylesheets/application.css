@@ -9,20 +9,32 @@
  *= require_self
  */
 
- .jumbotron {
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-size: 20px;
+  height: 100%;
+  width: 100%;
+  background-color: #F2F2F2;
+}
+
+.jumbotron {
   background-image: url(http://i.imgur.com/NFMZJAa.jpg?1);
   background-repeat: no-repeat;
   height: 465px;
   color:white;
   background-position: 50%;
   background-color: white;
- }
+}
 
- .header {
-    padding-top: 30px;
- }
+.header {
+  padding-top: 30px;
+}
 
- .navbar-default .navbar-brand {
+.navbar-default .navbar-brand {
   color: #3c763d;
 }
 
@@ -141,23 +153,11 @@ h2 {
   font-weight: bold;
 }
 
- html {
-  height: 100%;
-  width: 100%;
- }
-
 p {
   font-family: 'Open Sans', sans-serif;
   padding: 20px;
 }
 
-
-body {
-  font-size: 20px;
-  height: 100%;
-  width: 100%;
-  background-color: #F2F2F2;
-}
 
 li {
   list-style-type: none;
