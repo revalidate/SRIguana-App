@@ -43,13 +43,13 @@
     color: white;
 }
 
- .nav {
+.nav {
   padding-right: 20px;
- }
+}
 
- .form-control {
+.form-control {
   width: 70%;
- }
+}
 
 .center-content {
   margin: 0 auto;
@@ -81,19 +81,19 @@
 
 h1 span {
    font-family: 'Alegreya Sans SC', sans-serif;
-   color: #87C73C; 
-   font: bold 40px/60px; 
-   letter-spacing: -1px;  
-   padding: 20px; 
+   color: #87C73C;
+   font: bold 40px/60px;
+   letter-spacing: -1px;
+   padding: 20px;
    padding-right: 500px;
 
 }
 
-.text_overlay { 
-   position: absolute; 
-   top: 100px; 
-   right: 455px; 
-   width: 100%; 
+.text_overlay {
+   position: absolute;
+   top: 100px;
+   right: 455px;
+   width: 100%;
 }
 
 .mutual {
@@ -101,8 +101,8 @@ h1 span {
   width: 100%;
 }
 
-/*.overlay { 
-  position: absolute; 
+/*.overlay {
+  position: absolute;
   top: 210px;
 }*/
 
@@ -149,6 +149,7 @@ h3 {
 
 p {
   font-family: 'Open Sans', sans-serif;
+  padding: 20px;
 }
 
 
@@ -156,12 +157,8 @@ body {
   font-size: 20px;
   height: 100%;
   width: 100%;
-  background-color: #F2F2F2;  
+  background-color: #F2F2F2;
 }
-
-p {
-  padding: 20px;
- }
 
 li {
   list-style-type: none;
