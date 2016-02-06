@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :logged_in?, only: [:show, :edit, :update, :destroy, :add_mutual_fund, :delete_mutual_fund]
+  before_action :logged_in?, only: [:show, :edit, :update]
 
   def index
   end
@@ -50,6 +50,7 @@ class UsersController < ApplicationController
   end
 
   def destroy
+    #TODO: what if I'm not authorized (logged in?)?
     @user = User.friendly.find(params[:id])
     if current_user == @user
       @user.destroy
@@ -62,6 +63,7 @@ class UsersController < ApplicationController
   end
 
   def add_mutual_fund
+    #TODO: what if I'm not authorized (logged in?)?
     mutual_fund = MutualFund.friendly.find(params[:user][:mutual_fund_id])
 
     if current_user.mutual_funds.include?(mutual_fund)
@@ -74,6 +76,7 @@ class UsersController < ApplicationController
   end
 
   def delete_mutual_fund
+    #TODO: what if I'm not authorized (logged in?)?
     mutual_fund = MutualFund.friendly.find(params[:user][:mutual_fund_id])
     current_user.mutual_funds.delete(mutual_fund)
     flash[:notice] = "You have successfully deleted your portfolio"
@@ -87,7 +90,8 @@ class UsersController < ApplicationController
   end
 
   def set_user
-    user_id = params[:id] || current_user.id
+    # TODO: clarify what this is doing and how it is different from current_user
+    user_id = params[:id] || current_user.id # TODO: this doesn't seem right - could be a username or an id number!
     @user = User.friendly.find(user_id)
   end
 
