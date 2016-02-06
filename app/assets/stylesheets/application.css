@@ -9,6 +9,11 @@
  *= require_self
  */
 
+/*
+TODO: Move some of this css to page-specific stylesheets
+      application.css should contain general, site-wide styles only
+*/
+
 html {
   height: 100%;
   width: 100%;
