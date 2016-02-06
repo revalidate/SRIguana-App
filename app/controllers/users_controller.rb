@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :logged_in?, only: [:show, :edit, :update]
+  before_action :logged_in?, only: [:show, :edit, :update, :destroy, :add_mutual_fund, :delete_mutual_fund]
 
   def index
   end
