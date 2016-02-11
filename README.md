@@ -1,4 +1,4 @@
-#SRIguana
+#SRIguana App
 ###by [Reva Bhatt](https://github.com/revalidate), [Colbert Tse](https://github.com/trebloc), [Matt Seegan](https://github.com/mseegan), [Doug Tsui](https://github.com/bachtsui)
 SRIguana aims to bridge the gap between financial investment and social responsibility by breaking down what industries are related to your stocks, and ultimately the mutual funds you decide to invest in. It is meant to be a one stop shop for anyone interested in learning more about mutual funds and what they're really investing in. Users will be able to see how heavily they're invested in an industry. Depending on the industry they're invested, the user can choose whether or not they'd like to buy into the mutual fund using any third preferred party. SRIguana's job is to inform the investor. Users can also build portfolios of mutual funds they're interested in.
 
